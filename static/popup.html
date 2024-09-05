@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download Detector</title>
+    <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+    <h2>FTP Client</h2>
+    <div>
+        <label>FTP Server:</label>
+        <input type="text" id="ftp-server" placeholder="ftp://example.com" />
+    </div>
+    <div>
+        <label>Username:</label>
+        <input type="text" id="ftp-username" />
+    </div>
+    <div>
+        <label>Password:</label>
+        <input type="password" id="ftp-password" />
+    </div>
+    <button id="connect-btn">Connect</button>
+
+    <div id="file-list"></div>
+
+    <div id="progress">
+        <progress value="0" max="100" id="progress-bar"></progress>
+        <span id="progress-text"></span>
+    </div>
+
+    <h1>Recent Downloads</h1>
+    <div id="download-list">
+        <!-- Download items will be added here dynamically -->
+    </div>
+
+    <!--<script src="/libs/jsftp/lib/jsftp.js"></script> &lt;!&ndash; Import JSFTP &ndash;&gt;-->
+    <!--this must be name of file after bundling is done-->
+    <script src="./popup.bundle.js"></script>
+</body>
+</html>
